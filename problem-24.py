@@ -19,7 +19,12 @@ class Problem24():
         return tuple(perms)
 
     def solve(self, n):
-        return "".join("{0}".format(n) for n in self.gen_perms(range(n))[999999])
+        index = 0
+        for n in self.gen_perms(range(n)):
+            if index == 999999:
+                return "".join("{0}".format(i) for i in n)
+                break
+            index += 1
 
 if __name__ == "__main__":
     problem = Problem24()
