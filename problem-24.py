@@ -2,17 +2,16 @@
 # -*- coding: utf-8 -*-
 
 class Problem24():
-
     def gen_perms(self, input):
         input = tuple(input)
         perms = []
 
-        for n in input:
-            tmp = input if input[0] == n else (n,) + tuple(x for x in input if x != n)
+        for n in range(len(input)):
+            tmp = input if n == 0 else (input[n],) + input[:n] + input[n+1:]
 
             if len(tmp) > 2:
                 for i in self.gen_perms(tmp[1:]):
-                    perms.append((n,) + i)
+                    perms.append((input[n],) + i)
             else:
                 perms.append(tmp)
 
