@@ -4,7 +4,6 @@
 class Problem24():
 
     def gen_perms(self, input):
-        if len(input) == 1: return tuple(input)
         input = tuple(input)
         perms = []
 
