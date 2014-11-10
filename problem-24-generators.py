@@ -6,13 +6,11 @@ class Problem24():
         input = tuple(input)
 
         for n in xrange(len(input)):
-            tmp = input if n == 0 else (input[n],) + input[:n] + input[n+1:]
-
-            if len(tmp) > 2:
-                for i in self.gen_perms(tmp[1:]):
+            if len(input) > 2:
+                for i in self.gen_perms(input[:n] + input[n+1:]):
                     yield (input[n],) + i
             else:
-                yield tmp
+                yield input if n == 0 else (input[n],) + input[:n] + input[n+1:]
 
     def solve(self, n):
         index = 0
