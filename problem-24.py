@@ -7,13 +7,11 @@ class Problem24():
         perms = []
 
         for n in range(len(input)):
-            tmp = input if n == 0 else (input[n],) + input[:n] + input[n+1:]
-
-            if len(tmp) > 2:
-                for i in self.gen_perms(tmp[1:]):
+            if len(input) > 2:
+                for i in self.gen_perms(input[:n] + input[n+1:]):
                     perms.append((input[n],) + i)
             else:
-                perms.append(tmp)
+                perms.append(input if n == 0 else (input[n],) + input[:n] + input[n+1:])
 
         return tuple(perms)
 
