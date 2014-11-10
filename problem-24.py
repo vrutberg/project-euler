@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import time
+
 class Problem24():
     def gen_perms(self, input):
         input = tuple(input)
@@ -25,4 +27,9 @@ class Problem24():
 
 if __name__ == "__main__":
     problem = Problem24()
+
+    start = time.time()
     print problem.solve(10)
+    end = time.time()
+
+    print "Took {0} seconds".format(end - start)
