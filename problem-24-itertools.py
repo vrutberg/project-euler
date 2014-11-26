@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import time
 import itertools
 
-class Problem24():
+from problem import Problem
 
+class Problem24(Problem):
     def solve(self, n):
         index = 0
         for n in itertools.permutations(range(n)):
@@ -15,10 +15,4 @@ class Problem24():
             index += 1
 
 if __name__ == "__main__":
-    problem = Problem24()
-
-    start = time.time()
-    print problem.solve(10)
-    end = time.time()
-
-    print "Took {0} seconds".format(end - start)
+    Problem24().solve_with_timing(10)
