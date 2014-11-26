@@ -5,15 +5,12 @@ from problem import Problem
 
 class Problem1(Problem):
     def solve(self, n):
-        sum = 0
+        result = 0
 
-        for i in range(n-1):
-            num = i+1
+        result += sum(range(3, n, 3)) + sum(range(5, n, 5))
+        result -= sum(range(15, n, 15))
 
-            if num % 3 == 0 or num % 5 == 0:
-                sum += num
-
-        return sum
+        return result
 
 if __name__ == "__main__":
     Problem1().solve_with_timing(1000)
