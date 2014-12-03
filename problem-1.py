@@ -13,4 +13,4 @@ class Problem1(Problem):
         return result
 
 if __name__ == "__main__":
-    Problem1().solve_with_timing(1000)
+    Problem1().cli_interface(1000)

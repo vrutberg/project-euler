@@ -24,4 +24,4 @@ class Problem3(Problem):
         return r
 
 if __name__ == "__main__":
-    Problem3().solve_with_timing(600851475143)
+    Problem3().cli_interface(600851475143)

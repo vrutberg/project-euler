@@ -18,11 +18,11 @@ class Problem2(Problem):
 
             if tmp % 2 == 0:
                 sum += tmp
-                
+
             n1 = n2
             n2 = tmp
 
         return sum
 
 if __name__ == "__main__":
-    Problem2().solve_with_timing(4000000)
+    Problem2().cli_interface(4000000)

@@ -26,4 +26,4 @@ class Problem24(Problem):
             index += 1
 
 if __name__ == "__main__":
-    Problem24().solve_with_timing(10)
+    Problem24().cli_interface(10)
