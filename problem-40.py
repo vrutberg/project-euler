@@ -1,8 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import math
-
 from problem import Problem
 
 class Problem40(Problem):
