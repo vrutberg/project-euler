@@ -3,6 +3,7 @@
 
 from problem import Problem
 
+
 class Problem1(Problem):
     def solve(self, n):
         result = 0

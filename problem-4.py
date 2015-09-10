@@ -3,8 +3,8 @@
 
 from problem import Problem
 
-class Problem4(Problem):
 
+class Problem4(Problem):
     def solve(self, n):
         biggest = 0
         r = range(2, pow(10, n)) 

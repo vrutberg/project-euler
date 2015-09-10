@@ -3,9 +3,10 @@
 
 from problem import Problem
 
-class Problem40(Problem):
 
-    def get_index(self, n):
+class Problem40(Problem):
+    @staticmethod
+    def get_index(n):
         return int("".join([str(x) for x in range(1, n+1)])[n-1])
 
     def solve(self, numbers):

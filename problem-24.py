@@ -3,17 +3,18 @@
 
 from problem import Problem
 
+
 class Problem24(Problem):
-    def gen_perms(self, input):
-        input = tuple(input)
+    def gen_perms(self, input_value):
+        input_value = tuple(input_value)
         perms = []
 
-        for n in range(len(input)):
-            if len(input) > 2:
-                for i in self.gen_perms(input[:n] + input[n+1:]):
-                    perms.append((input[n],) + i)
+        for n in range(len(input_value)):
+            if len(input_value) > 2:
+                for i in self.gen_perms(input_value[:n] + input_value[n+1:]):
+                    perms.append((input_value[n],) + i)
             else:
-                perms.append(input if n == 0 else (input[n],) + input[:n] + input[n+1:])
+                perms.append(input_value if n == 0 else (input_value[n],) + input_value[:n] + input_value[n+1:])
 
         return tuple(perms)
 
@@ -22,7 +23,6 @@ class Problem24(Problem):
         for n in self.gen_perms(range(n)):
             if index == 999999:
                 return "".join("{0}".format(i) for i in n)
-                break
             index += 1
 
 if __name__ == "__main__":

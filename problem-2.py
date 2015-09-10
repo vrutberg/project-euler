@@ -3,9 +3,10 @@
 
 from problem import Problem
 
+
 class Problem2(Problem):
     def solve(self, n):
-        sum = 0
+        result = 0
 
         n1 = 1
         n2 = 1
@@ -17,12 +18,12 @@ class Problem2(Problem):
                 break
 
             if tmp % 2 == 0:
-                sum += tmp
+                result += tmp
 
             n1 = n2
             n2 = tmp
 
-        return sum
+        return result
 
 if __name__ == "__main__":
     Problem2().cli_interface(4000000)

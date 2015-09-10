@@ -5,10 +5,12 @@ import math
 
 from problem import Problem
 
+
 class Problem3(Problem):
 
-    def isPrime(self, n):
-        for i in xrange(2, n/2):
+    @staticmethod
+    def is_prime(n):
+        for i in range(2, int(n/2)):
             if n % i == 0:
                 return False
 
@@ -17,8 +19,8 @@ class Problem3(Problem):
     def solve(self, n):
         r = -1
 
-        for i in xrange(2, int(math.ceil(math.sqrt(n)))):
-            if (n / float(i)) % 1.0 == 0.0 and self.isPrime(i):
+        for i in range(2, int(math.ceil(math.sqrt(n)))):
+            if (n / float(i)) % 1.0 == 0.0 and self.is_prime(i):
                 r = i
 
         return r

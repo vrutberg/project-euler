@@ -3,9 +3,10 @@
 
 from problem import Problem
 
+
 class Problem5(Problem):
-    def solve(self, input):
-        numbers = range(1, input + 1)
+    def solve(self, input_value):
+        numbers = list(range(1, input_value + 1))
         numbers.reverse()
 
         n = numbers[0]
