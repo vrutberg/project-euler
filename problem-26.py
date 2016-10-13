@@ -11,9 +11,9 @@ class Problem26(Problem):
         result = { 'index': 0, 'cycle': '' }
         results = {}
 
-        getcontext().prec = 10000
-
         for x in range(2, n+1):
+            getcontext().prec = x * 2
+
             searchResult = re.findall('(\\d+)\\1', str(Decimal(1.0)/Decimal(x)))
 
             if len(searchResult) > 0:
